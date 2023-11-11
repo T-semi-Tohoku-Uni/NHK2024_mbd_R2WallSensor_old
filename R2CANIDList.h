@@ -1,0 +1,17 @@
+//
+// Created by Yoshi on 2023/11/12.
+//
+
+#ifndef R2CANIDLIST_H
+#define R2CANIDLIST_H
+
+#define CANID_EMERGENCY 0x000
+
+#define CANID_BATTERY_ERROR 0x001
+#define CANID_DJIIF_ERROR
+#define CANID_LINESENSOR_ERROR
+#define CANID_ODOMETRY_ERROR
+
+#define CANID_ROBOT_VEL
+
+#endif //SOFTWARE_R2CANIDLIST_H
