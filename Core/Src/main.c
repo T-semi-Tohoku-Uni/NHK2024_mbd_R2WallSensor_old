@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "R2CANIDList.h"
 
 /* USER CODE END Includes */
 
@@ -76,7 +77,7 @@ void  HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		TxHeader.FDFormat = FDCAN_FD_CAN;
 		TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
 		TxHeader.MessageMarker = 0;
-		TxHeader.Identifier = 0x111;
+		TxHeader.Identifier = CANID_WALL_DETECTION;
 
 		TxData = HAL_GPIO_ReadPin(Sensor1_GPIO_Port, Sensor1_Pin) | (HAL_GPIO_ReadPin(Sensor2_GPIO_Port, Sensor2_Pin) << 1);
 
