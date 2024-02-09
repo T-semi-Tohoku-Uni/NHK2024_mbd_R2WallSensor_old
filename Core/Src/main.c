@@ -81,11 +81,11 @@ void  HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 		TxData = HAL_GPIO_ReadPin(Sensor1_GPIO_Port, Sensor1_Pin) | (HAL_GPIO_ReadPin(Sensor2_GPIO_Port, Sensor2_Pin) << 1);
 
 		printf("%x\r\n", TxData);
-		/*
+
 		if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) {
 			/* Transmission request Error */
 			//Error_Handler();
-		//}
+		}
 	}
 }
 
