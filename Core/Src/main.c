@@ -84,7 +84,7 @@ void  HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 		if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) {
 			/* Transmission request Error */
-			//Error_Handler();
+			Error_Handler();
 		}
 	}
 }
