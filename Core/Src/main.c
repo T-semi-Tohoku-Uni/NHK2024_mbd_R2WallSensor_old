@@ -65,6 +65,7 @@ static void MX_TIM17_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 void  HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim == &htim17){
 		uint8_t TxData = 0;
@@ -133,10 +134,11 @@ int main(void)
   MX_FDCAN1_Init();
   MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
+  HAL_FDCAN_Start(&hfdcan1);
   HAL_TIM_Base_Start_IT(&htim17);
   printf("Initialized\r\n");
 
-  HAL_FDCAN_Start(&hfdcan1);
+
 
   /* USER CODE END 2 */
 
